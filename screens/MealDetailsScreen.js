@@ -1,5 +1,6 @@
 import { useLayoutEffect } from "react";
 import { Image, Text, View, StyleSheet, ScrollView } from "react-native";
+
 import IconButton from "../components/IconButton";
 import List from "../components/MealDetail/List";
 import Subtitle from "../components/MealDetail/Subtitle";
@@ -17,6 +18,7 @@ const MealDetailsScreen = ({ route, navigation }) => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
+      title: selectedMeal.title,
       headerRight: () => {
         return (
           <IconButton
